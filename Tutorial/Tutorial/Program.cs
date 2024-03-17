@@ -1,35 +1,36 @@
 ﻿namespace Tutorial;
 
+
+
 public class Program
 {
     public static void Main(string[] args)
     {
-        // Example usage:
-        int[] numbers = { 1, 2, 3, 4, 5 };
-        double average = CalculateAverage(numbers);
-        Console.WriteLine("Average: " + average);
+       
+        int[] numbers = { 10, 8, 3, 12, 4 };
+        int max = FindMaximum(numbers);
+        Console.WriteLine("Maximum value: " + max);
     }
 
-    public static double CalculateAverage(int[] numbers)
+    
+    public static int FindMaximum(int[] numbers)
     {
         if (numbers == null || numbers.Length == 0)
         {
             throw new ArgumentException("Array cannot be null or empty");
         }
 
-        int sum = 0;
+        int max = numbers[0]; 
+
+       
         foreach (int num in numbers)
         {
-            sum += num;
+            if (num > max)
+            {
+                max = num; 
+            }
         }
 
-        // Calculate average
-        double average = (double)sum / numbers.Length;
-        return average;
+        return max; 
     }
 }
-
-
-
-
-
