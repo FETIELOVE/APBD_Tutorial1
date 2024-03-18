@@ -6,31 +6,27 @@ public class Program
 {
     public static void Main(string[] args)
     {
-       
-        int[] numbers = { 10, 8, 3, 12, 6 };
-        int max = FindMaximum(numbers);
-        Console.WriteLine("Maximum value: " + max);
+        // Example usage:
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        double average = CalculateAverage(numbers);
+        Console.WriteLine("Average: " + average);
     }
 
-    
-    public static int FindMaximum(int[] numbers)
+    public static double CalculateAverage(int[] numbers)
     {
         if (numbers == null || numbers.Length == 0)
         {
             throw new ArgumentException("Array cannot be null or empty");
         }
 
-        int max = numbers[0]; 
-
-       
-        foreach (int num in numbers)
+        int sum = 0;
+        foreach (int item in numbers)
         {
-            if (num > max)
-            {
-                max = num; 
-            }
+            sum += item;
         }
 
-        return max; 
+        // Calculate average
+        double average = (double)sum / numbers.Length;
+        return average;
     }
 }
