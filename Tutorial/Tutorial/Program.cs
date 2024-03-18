@@ -7,7 +7,7 @@ public class Program
     public static void Main(string[] args)
     {
        
-        int[] numbers = { 10, 8, 3, 12, 4 };
+        int[] numbers = { 10, 8, 3, 12, 6 };
         int max = FindMaximum(numbers);
         Console.WriteLine("Maximum value: " + max);
     }
