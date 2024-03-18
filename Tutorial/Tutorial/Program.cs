@@ -20,9 +20,11 @@ public class Program
         }
 
         int sum = 0;
-        foreach (int item in numbers)
+
+        foreach (int number in numbers)
         {
-            sum += item;
+            sum += number;
+
         }
 
         // Calculate average
